@@ -26,6 +26,7 @@ function updateCount() {
 function setUI() {
   const selectedSeats = JSON.parse(localStorage.getItem('selectedSeats'));
   const selectedMovieIndex = localStorage.getItem('selectedMovieIndex');
+  const selectedMoviePrice = localStorage.getItem('selectedMoviePrice');
 
   if(selectedSeats && selectedSeats.length > 0) {
     seats.forEach((seat, index) => {
@@ -38,6 +39,10 @@ function setUI() {
   if(selectedMovieIndex) {
     movieSelect.selectedIndex = selectedMovieIndex;
   }
+
+  if(selectedMoviePrice) {
+    moviePrice = +selectedMoviePrice;
+  }
 }
 
 // event listener
@@ -45,6 +50,7 @@ movieSelect.addEventListener('change', e => {
   moviePrice = +e.target.value;
 
   localStorage.setItem('selectedMovieIndex', movieSelect.selectedIndex);
+  localStorage.setItem('selectedMoviePrice', e.target.value);
 
   updateCount();
 });
