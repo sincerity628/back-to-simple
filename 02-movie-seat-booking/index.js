@@ -33,7 +33,7 @@ function setUI() {
       if(selectedSeats.indexOf(index) > -1) {
         seat.classList.add('selected');
       }
-    })
+    });
   }
 
   if(selectedMovieIndex) {

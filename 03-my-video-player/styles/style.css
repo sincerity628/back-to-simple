@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+
+:root {
+  --player-width: 60%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Questrial', sans-serif;
+  background-color: #666;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  padding-bottom: 10%;
+}
+
+h1 {
+  color: #fff;
+}
+
+.sys-title {
+  margin-top: 10%;
+}
+
+.screen {
+  background-color: #000 !important;
+  width: var(--player-width);
+  cursor: pointer;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.sys-screen {
+  width: var(--player-width);
+}
+
+.controls {
+  width: var(--player-width);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.controls .btn {
+  border: 0;
+  background: transparent;
+  color: #fff;
+}
+
+.controls .btn:hover {
+  color: #999;
+  cursor: pointer;
+}
+
+.controls .btn:focus {
+  outline: none;
+}
+
+.controls .timestamp {
+  color: #fff;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+@media (max-width: 1000px) {
+  .screen,
+  .sys-screen,
+  .controls {
+    width: 90%;
+  }
+}
+
+.progress {
+  background: #fff !important;
+  width: 100%;
+  cursor: pointer;
+}
