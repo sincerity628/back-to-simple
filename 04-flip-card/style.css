@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+h1 {
+  position: relative;
+}
+
+h1 button {
+  position: absolute;
+  right: 0;
+  transform: translate(120%, -50%);
+  z-index: 2; /* always on top */
+}
+
+.btn {
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  border: 1px solid #333;
+}
+
+.btn:focus {
+  outline: none;
+  border: 1px solid #333;
+}
+
+.btn-small {
+  font-size: 12px;
+  padding: 5px 10px;
+}
+
+.btn-ghost {
+  border: 0;
+  background-color: transparent;
+}
+
+.btn-ghost:hover {
+  border: 0;
+}
+
+.btn-ghost:focus {
+  border: 0;
+}
+
+.clear {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+
+.cards {
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+  height: 300px;
+  width: 500px;
+  max-width: 100%;
+}
+
+.card {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5em;
+  font-weight: 300;
+  top: 0;
+  left: 0;
+  transform: translateX(50%) rotateY(-10deg);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.card.active {
+  cursor: pointer;
+  opacity: 1;
+  z-index: 10;
+  transform: translateX(0) rotateY(0deg);
+}
+
+.card.left {
+  transform: translateX(-50%) rotateY(10deg);
+}
+
+.inner-card {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.card.show-answer .inner-card {
+  transform: rotateX(180deg);
+}
+
+.inner-card-front,
+.inner-card-back {
+  backface-visibility: hidden;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.inner-card-front {
+  transform: rotateX(0deg);
+  z-index: 2;
+}
+
+.inner-card-back {
+  transform: rotateX(180deg);
+}
+
+.inner-card-front::after,
+.inner-card-back::after {
+  content: '\f021  Flip';
+  font-family: 'Font Awesome 5 Free', 'Lato', sans-serif;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ddd;
+}
+
+.navigation {
+  margin: 20px 0;
+  display: flex;
+}
+
+.navigation .nav-btn {
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+.navigation .nav-btn:focus {
+  outline: none;
+}
+
+.navigation p {
+  margin: 0 25px;
+}
+
+.add-container {
+  opacity: 0;
+  z-index: -1;
+  background-color: #f0f0f0;
+  border-top: 2px solid #fff;
+  padding: 10px 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease;
+}
+
+.add-container.show {
+  opacity: 1;
+  z-index: 2;
+}
+
+.add-container h1 {
+  margin: 10px 0;
+}
+
+.form-group label {
+  display: block;
+  margin: 20px 0 10px;
+  color: #333;
+}
+
+.form-group textarea {
+  border: 1px solid #aaa;
+  font-size: 16px;
+  padding: 12px;
+  min-width: 500px;
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.form-group textarea:focus {
+  outline: none;
+  border: 1px solid #333;
+}
