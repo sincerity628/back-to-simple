@@ -8,6 +8,7 @@ const calculateWealthBtn = document.getElementById('calculate-wealth');
 // to store the user objects
 let data = [];
 
+// get the first 3 initial person
 getRandomUser();
 getRandomUser();
 getRandomUser();
@@ -64,7 +65,7 @@ function calculateWealth() {
 
   const wealthEl = document.createElement('h3');
   wealthEl.innerHTML = `
-  Total Wealth: <strong>${formatWealth(wealth)}</strong>
+  Total Wealth: <strong>${ formatWealth(wealth) }</strong>
   `;
 
   main.appendChild(wealthEl);
