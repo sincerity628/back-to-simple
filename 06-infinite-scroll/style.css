@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 :root {
-  --primary-color: #5b2957;
+  --primary-color: #f67280;
+  --secondary-color: #f8b195;
 }
 
 * {
@@ -45,7 +46,7 @@ h1 {
 }
 
 .post {
-  background-color: #75346f;
+  background-color: var(--secondary-color);
   padding: 20px;
   margin: 40px 0;
   width: 80vw;
