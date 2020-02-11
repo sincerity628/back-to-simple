@@ -1,6 +1,6 @@
 # 07-wealth-list
 
-### :eyes: demo: [07-wealth-list](https://sincerity628.github.io/back-to-simple/07-wealth-list/index.html)
+### :eyes: demo: [07-demo](https://sincerity628.github.io/back-to-simple/07-wealth-list/index.html)
 ### :muscle: What can I learn in this project? DOM Array Methods!!!
 - add user: forEach()
 - double: map()
