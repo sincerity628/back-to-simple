@@ -2,7 +2,6 @@
 
 #### :see_no_evil: :hear_no_evil: :speak_no_evil: just try to do some projects only using javascript, css and html without any front-end framework to review some basic knowledge.
 
----
 
 ### :eyes: demo list:
 
