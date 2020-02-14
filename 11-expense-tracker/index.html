@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+  <link rel="icon" href="../assets/favicon.ico">
+  <link rel="stylesheet" href="./style.css">
+  <title>Expense Tracker</title>
+</head>
+<body>
+  <h2>Expense Tracker</h2>
+
+  <div class="container">
+    <h4>Your balence</h4>
+    <h1 id="balence">¥ 0.00</h1>
+
+    <!-- income & expense container -->
+    <div class="inc-exp-container">
+      <div>
+        <h4>Income</h4>
+        <p id="money-plus" class="money plus">+¥0.00</p>
+      </div>
+      <div>
+        <h4>Expense</h4>
+        <p id="money-minus" class="money minus">-¥0.00</p>
+      </div>
+    </div>
+
+    <h3>History</h3>
+    <ul id="list" class="list">
+      <li class="minus">
+        book <span>-¥20.00</span>
+        <button id="delete" class="delete-btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </li>
+      <li class="plus">
+        lucky money <span>+¥100.00</span>
+        <button id="delete" class="delete-btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </li>
+    </ul>
+
+    <h3>Add new transaction</h3>
+    <form id="form">
+      <div class="form-control">
+        <label for="text">Text:</label>
+        <input
+          type="text"
+          id="text"
+          autoComplete="off"
+          placeholder="Enter text..."
+        />
+      </div>
+
+      <div class="form-control">
+        <label for="amount">
+          Amount: <br />
+          (negative - expense, positive - income)
+        </label>
+        <input
+          type="number"
+          id="amount"
+          autoComplete="off"
+          placeholder="Enter amount..."
+        />
+      </div>
+
+      <button class="btn">Add transaction</button>
+    </form>
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+</html>

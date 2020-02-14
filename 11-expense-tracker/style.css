@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --main-red: #c0392b;
+  --main-green: #2ecc71;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7f7f7;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  margin: 30px auto;
+  width: 350px;
+}
+
+h1 {
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+h3 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+}
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.inc-exp-container {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+}
+
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid #dedede;
+}
+
+.money {
+  margin: 5px 0;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.money.plus {
+  color: var(--main-green);
+}
+
+.money.minus {
+  color: var(--main-red);
+}
+
+.list {
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 40px;
+}
+
+.list li {
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  margin: 10px 0;
+  padding: 10px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list li.plus {
+  border-right: 5px solid var(--main-green);
+}
+
+.list li.minus {
+  border-right: 5px solid var(--main-red);
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #e74c3c;
+  color: #fff;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+}
+
+label {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+input[type="text"],
+input[type="number"] {
+  display: block;
+  bakcground-color: #fff;
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  border: 1px solid #bbb;
+}
+
+.btn {
+  background-color: #9c88ff;
+  margin: 10px 0 30px;
+  color: #fff;
+  border: 0;
+  border-radius: 2px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.1s ease-in-out;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #8472df;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus {
+  outline: none;
+}
