@@ -26,6 +26,7 @@ before:
 ![before-view](./screen-shots/before.png)
 
 after:
+
 ![after-view](./screen-shots/after.png)
 
 template:
