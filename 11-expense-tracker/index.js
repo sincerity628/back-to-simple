@@ -20,7 +20,7 @@ let transactions =
 function addTransaction(e) {
   e.preventDefault();
   if(!text.value || !amount.value) return;
-
+  
   const transaction = {
     id: getRandomId(),
     text: text.value,
