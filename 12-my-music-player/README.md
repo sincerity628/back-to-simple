@@ -62,3 +62,47 @@ style:
 }
 
 ```
+
+---
+
+### :musical_note: add the little white circle on the cover image
+
+before:
+
+![cover-before](./screen-shots/circle-before.png)
+
+after:
+
+![cover-after](./screen-shots/circle-after.png)
+
+template:
+
+![player-structure](./screen-shots/circle-structure.png)
+
+```html
+<body>
+  <div class="image-container">
+    <img src="./images/image.png" alt="cover-image" />
+  </div>
+</body>
+```
+
+style:
+```css
+.image-container {
+  position: relative;
+}
+
+/* the white circle */
+.image-container::after {
+  content: '';
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+}
+```
