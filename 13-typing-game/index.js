@@ -8,6 +8,159 @@ const timeEl = document.getElementById('time');
 const scoreEl = document.getElementById('score');
 const endGameContainer = document.getElementById('end-game-container');
 
+const words = [
+  "husking",
+  "potiches",
+  "ghostwritten",
+  "bewailers",
+  "gnarr",
+  "impetrate",
+  "rummiest",
+  "chichiest",
+  "myxomata",
+  "acetylcholine",
+  "anemometers",
+  "jailed",
+  "septupling",
+  "lugworms",
+  "disembowel",
+  "staphylococcus",
+  "turbidimetries",
+  "seraph",
+  "noodling",
+  "referring",
+  "respool",
+  "phantasied",
+  "reheeled",
+  "characterizing",
+  "raffishly",
+  "lungworts",
+  "fimbriae",
+  "unimaginable",
+  "speeds",
+  "untied",
+  "sinlessly",
+  "waterski",
+  "skewbald",
+  "blobbing",
+  "caesiums",
+  "plots",
+  "hejira",
+  "gribble",
+  "bribe",
+  "shuteye",
+  "reductor",
+  "voltmeters",
+  "naevoid",
+  "muleteers",
+  "sleave",
+  "suckering",
+  "puling",
+  "ordure",
+  "dopamine",
+  "us",
+  "subceiling",
+  "limberer",
+  "pawnshop",
+  "dadaist",
+  "ruralites",
+  "lineable",
+  "tutorage",
+  "rerelease",
+  "birthed",
+  "catechins",
+  "usurer",
+  "slipware",
+  "quadrivium",
+  "nucleinic",
+  "shutdowns",
+  "myxomatoses",
+  "louses",
+  "quartettes",
+  "myoclonuses",
+  "pinball",
+  "eutrophications",
+  "nontransferable",
+  "irrevocability",
+  "gonorrhea",
+  "mump",
+  "pilocarpine",
+  "persuasive",
+  "metricates",
+  "aerobatic",
+  "potshards",
+  "battling",
+  "imperiousness",
+  "stiff",
+  "hamzahs",
+  "car",
+  "coerecting",
+  "hirers",
+  "natrolite",
+  "fetching",
+  "yokes",
+  "saltire",
+  "wardrobed",
+  "algebraically",
+  "slinking",
+  "promotiveness",
+  "pivoted",
+  "shoats",
+  "hanaper",
+  "label",
+  "microimages",
+  "hakim",
+  "theretofore",
+  "pomfrets",
+  "add",
+  "addresser",
+  "ratifier",
+  "teacakes",
+  "zeks",
+  "sraddha",
+  "antinepotism",
+  "thermoclines",
+  "outboast",
+  "overblouse",
+  "wissed",
+  "sarments",
+  "repoured",
+  "viselike",
+  "periscope",
+  "bibliology",
+  "sagiest",
+  "caboched",
+  "defendants",
+  "passerines",
+  "accuse",
+  "reddishnesses",
+  "creolised",
+  "disreputability",
+  "exercycle",
+  "megadeath",
+  "spectates",
+  "defences",
+  "cavitation",
+  "meioses",
+  "toponym",
+  "cruelness",
+  "mudholes",
+  "unbelt",
+  "swam",
+  "semibreves",
+  "headstream",
+  "roofings",
+  "superachievers",
+  "peoples",
+  "cheerier",
+  "bakeshops",
+  "evocative",
+  "colorbreeding",
+  "mocktails",
+  "forwhy",
+  "chowsing"
+];
+
 let randomWord = '';
 
 let time = 15;
@@ -30,29 +183,31 @@ text.focus();
 // start the countdown
 const timeInterval = setInterval(updateTime, 1000);
 
-async function getRandomWord() {
-  const res = await fetch('https://random-word-api.herokuapp.com/word?key=A9OVMFYZ&number=1')
-  const data = await res.json();
-
-  return data[0];
+// async function getRandomWord() {
+//   const res = await fetch('https://random-word-api.herokuapp.com/word?key=A9OVMFYZ&number=1')
+//   const data = await res.json();
+//
+//   return data[0];
+// }
+function getRandomWord() {
+  return words[Math.floor(Math.random() * words.length)];
 }
 
-async function addWordToDOM() {
-  randomWord = await getRandomWord();
+function addWordToDOM() {
+  randomWord = getRandomWord();
 
   // for different difficulties the word's length is different
+  while(randomWord.length > 6 && difficulty === 'easy') {
+    randomWord = getRandomWord();
+  }
 
-  // while(randomWord.length > 6 && difficulty === 'easy') {
-  //   randomWord = await getRandomWord();
-  // }
-  //
-  // while((randomWord.length > 10 || randomWord.length < 6) && difficulty === 'medium') {
-  //   randomWord = await getRandomWord();
-  // }
-  //
-  // while(randomWord.length < 10 && difficulty === 'hard') {
-  //   randomWord = await getRandomWord();
-  // }
+  while((randomWord.length > 10 || randomWord.length < 6) && difficulty === 'medium') {
+    randomWord = getRandomWord();
+  }
+
+  while(randomWord.length < 10 && difficulty === 'hard') {
+    randomWord = getRandomWord();
+  }
 
   wordEl.innerHTML = randomWord;
 }
