@@ -1,0 +1,135 @@
+:root {
+  --background-color: #bac7a7;
+  --container-color: #889e81;
+  --select-color: #e5e4cc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  background-color: #fff;
+  border: 0;
+  border-radius: 4px;
+  padding: 5px 15px;
+  font-size: 14px;
+  transition: transform 0.1s ease-in;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+select {
+  background-color: var(--select-color);
+  padding: 5px;
+  width: 200px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  border: 0;
+}
+
+.setting-btn {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+}
+
+.setting {
+  position: absolute;
+  color: #fff;
+  top: 0;
+  left: 0;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.setting.hide {
+  transform: translateY(-100%);
+}
+
+.container {
+  background-color: var(--container-color);
+  padding: 20px;
+  max-width: 95%;
+  width: 500px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.container h2 {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 8px;
+  margin: 0 0 40px;
+}
+
+.container h1 {
+  margin: 0;
+}
+
+.container input {
+  backgorund-color: #fff;
+  border: 0;
+  padding: 12px 20px;
+  font-size: 14px;
+  margin-top: 20px;
+  width: 300px;
+  max-width: 95%;
+  border-radius: 4px;
+}
+
+button:focus,
+select:focus,
+.container input:focus {
+  outline: none;
+}
+
+.time-container {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+}
+
+.score-container {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+}
+
+.end-game-container {
+  background-color: inherit;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}

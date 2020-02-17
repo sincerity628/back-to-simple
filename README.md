@@ -16,5 +16,5 @@
 - 10-meal-finder [detail](https://github.com/sincerity628/back-to-simple/tree/master/10-meal-finder)
 - 11-expense-tracker [detail](https://github.com/sincerity628/back-to-simple/tree/master/11-expense-tracker)
 - 12-my-music-player [detail](https://github.com/sincerity628/back-to-simple/tree/master/12-my-music-player)
-
+- 13-typing-game [detail](https://github.com/sincerity628/back-to-simple/tree/master/13-typing-game)
 ---
