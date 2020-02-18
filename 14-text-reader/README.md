@@ -16,3 +16,8 @@ style:
   /* the margin among all the grids */
 }
 ```
+---
+
+### :speech_balloon: some tech documentation
+- [Web Speech API (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API)
+- [Vendor Prefix浏览器引擎前缀 (MDN)](https://developer.mozilla.org/zh-CN/docs/Glossary/Vendor_Prefix)
