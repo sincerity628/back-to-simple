@@ -4,7 +4,8 @@
 
 ---
 
-:woman_technologist: reload the page
+### :woman_technologist: reload the page
+
 solution:
 ```js
 window.location.reload();

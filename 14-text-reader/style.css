@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffefea;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  margin: auto;
+  padding: 20px;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: darksalmon;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus,
+.close-btn:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+.toggle-btn {
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.text-box {
+  width: 70%;
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  top: 30%;
+  left: 50%;
+  padding: 20px;
+  transform: translate(-50%, -800px);
+  transition: all 1s ease-in-out;
+}
+
+.text-box.show {
+  transform: translateY(0);
+}
+
+.text-box select {
+  background-color: darksalmon;
+  color: #fff;
+  border: 0;
+  width: 100%;
+  height: 30px;
+  padding: 10px;
+  font-size: 12px;
+  apperance: none;
+  -webkit-apperance: none;
+  -moz-appearance: none;
+}
+
+.text-box textarea {
+  border: 1px solid #dedede;
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 15px 0;
+  width: 100%;
+  height: 150px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.text-box .btn {
+  width: 100%;
+}
+
+.text-box .close-btn {
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.box {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease-out;
+}
+
+.box.active {
+  box-shadow: 0 0 10px 5px darksalmon;
+}
+
+.box .box-info {
+  background-color: darksalmon;
+  margin: 0;
+  padding: 20px;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+}
+
+.box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+@media(max-width: 1100px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media(max-width: 760px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 500px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
