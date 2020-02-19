@@ -1,6 +1,6 @@
 # 08-Menu-slider-and-modal(css heavy)
 
-### :eyes: demo: [08-demo](https://sincerity628.github.io/back-to-simple/08-menu-slider-and-modal/index.html)
+### :eyes: demo: [08-demo](http://47.98.249.108:3001/08-menu-slider-and-modal/index.html)
 
 ### :thinking: how to center an object (.child in .father)?
 

@@ -1,3 +1,3 @@
 # 05-exchange-calculator
 
-### :eyes: demo: [05-demo](https://sincerity628.github.io/back-to-simple/05-exchange-calculator/index.html)
+### :eyes: demo: [05-demo](http://47.98.249.108:3001/05-exchange-calculator/index.html)

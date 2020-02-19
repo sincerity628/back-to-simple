@@ -1,6 +1,6 @@
 # 10-meal-finder
 
-### :eyes: demo: [10-demo](https://sincerity628.github.io/back-to-simple/10-meal-finder/index.html)
+### :eyes: demo: [10-demo](http://47.98.249.108:3001/10-meal-finder/index.html)
 
 ---
 

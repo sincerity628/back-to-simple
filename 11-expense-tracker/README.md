@@ -1,6 +1,6 @@
 # 11-expense-tracker
 
-### :eyes: demo: [11-demo](https://sincerity628.github.io/back-to-simple/11-expense-tracker/index.html)
+### :eyes: demo: [11-demo](http://47.98.249.108:3001/11-expense-tracker/index.html)
 
 ---
 

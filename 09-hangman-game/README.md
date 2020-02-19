@@ -1,6 +1,6 @@
 # 09-hangman-game
 
-### :eyes: demo: [09-demo](https://sincerity628.github.io/back-to-simple/09-hangman-game/index.html)
+### :eyes: demo: [09-demo](http://47.98.249.108:3001/09-hangman-game/index.html)
 
 ---
 

@@ -1,3 +1,3 @@
 # 02-movie-seat-booking
 
-### :eyes: demo: [02-demo](https://sincerity628.github.io/back-to-simple/02-movie-seat-booking/index.html)
+### :eyes: demo: [02-demo](http://47.98.249.108:3001/02-movie-seat-booking/index.html)

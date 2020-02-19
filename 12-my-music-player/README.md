@@ -1,6 +1,12 @@
 # 12-my-music-player
 
-### :eyes: demo: [12-demo](https://sincerity628.github.io/back-to-simple/12-my-music-player/index.html)
+### :eyes: demo: [12-demo](http://47.98.249.108:3001/12-my-music-player/index.html)
+
+---
+
+### :musical_note: wait for loading the music...
+
+![music](./screen-shots/music.png)
 
 ---
 
