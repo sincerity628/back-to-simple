@@ -18,5 +18,6 @@
 - 12-my-music-player [detail](https://github.com/sincerity628/back-to-simple/tree/master/12-my-music-player)
 - 13-typing-game [detail](https://github.com/sincerity628/back-to-simple/tree/master/13-typing-game)
 - 14-text-reader [detail](https://github.com/sincerity628/back-to-simple/tree/master/14-text-reader)
+- 15-lyrics-finder [detail](https://github.com/sincerity628/back-to-simple/tree/master/15-lyrics-finder)
 
 ---
