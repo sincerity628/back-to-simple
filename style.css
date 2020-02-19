@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Alata|Gloria+Hallelujah&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #381460;
+  color: #fff;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 15%;
+  margin: 0 auto;
+  border-bottom: 1px solid #4c1e7e;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-family: 'Gloria Hallelujah', sans-serif;
+}
+
+nav .logo:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+nav .nav-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav .logo:hover,
+nav .nav-link:hover {
+  color: #fe346e;
+}
+
+nav ul li:first-of-type {
+  margin-right: 20px;
+}
+
+.container {
+  text-align: center;
+  padding: 150px;
+}
