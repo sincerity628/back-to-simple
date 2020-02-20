@@ -1,6 +1,6 @@
 # 16-relaxer-app
 
-### :eyes: demo: [16-demo](https://sincerity628.github.io/back-to-simple/16-relaxer-app/index.html)
+### :eyes: demo: [16-demo](http://47.98.249.108:3001/16-relaxer-app/index.html)
 
 ---
 

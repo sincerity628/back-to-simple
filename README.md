@@ -2,6 +2,14 @@
 
 #### :see_no_evil: :hear_no_evil: :speak_no_evil: just try to do some projects only using javascript, css and html without any front-end framework to review some basic knowledge.
 
+---
+
+### :eyes: projects website: [link](http://47.98.249.108:3001/)
+
+![homepage](./assets/images/index.png)
+
+---
+
 ### :eyes: detail list:
 
 - 01-form-validator [detail](https://github.com/sincerity628/back-to-simple/tree/master/01-form-validator)
