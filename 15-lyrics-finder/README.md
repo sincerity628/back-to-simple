@@ -1,6 +1,6 @@
 # 15-lyrics-finder
 
-### :eyes: demo: [15-demo](http://47.98.249.108:3001/15-lyrics-finder/index.html)
+### :eyes: demo: [15-demo](https://sincerity628.github.io/back-to-simple/15-lyrics-finder/index.html)
 
 ### :musical_note: api link [(lyrics.ovh)](https://lyricsovh.docs.apiary.io/#reference/0/lyrics-of-a-song/search)
 

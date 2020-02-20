@@ -31,10 +31,6 @@ style:
 
 ### :relieved: understand the transform-origin: [link](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-origin)
 
-result:
-
-
-
 style:
 ```css
 .pointer-container {
