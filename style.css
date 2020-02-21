@@ -6,6 +6,7 @@
 
 body {
   background-color: #010a43;
+  font-family: sans-serif;
   color: #fff;
   margin: 0;
 }
@@ -16,7 +17,7 @@ nav {
   justify-content: space-between;
   padding: 20px 15%;
   margin: 0 auto;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #031067;
 }
 
 nav .logo {

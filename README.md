@@ -4,7 +4,7 @@
 
 ---
 
-### :eyes: projects website: [link](http://47.98.249.108:3001/)
+### :eyes: projects website: [link](https://sincerity628.github.io/back-to-simple/)
 
 ![homepage](./assets/images/index.png)
 
