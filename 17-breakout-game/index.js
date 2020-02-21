@@ -11,7 +11,7 @@ const ball = {
   size: 10,
   speed: 4,
   dx: 4,
-  dy: 4
+  dy: -4
 };
 
 // set the paddle props
@@ -38,13 +38,13 @@ const brickInfo = {
 };
 
 // create the bricks
-const brickColumnCount = 9;
 const brickRowCount = 5;
-let bricks = [];
+const brickColumnCount = 9;
 
-for(let i = 0; i < brickRowCount; i++) {
+const bricks = [];
+for (let i = 0; i < brickRowCount; i++) {
   bricks[i] = [];
-  for(let j = 0; j < brickColumnCount; j++) {
+  for (let j = 0; j < brickColumnCount; j++) {
     const x = j * (brickInfo.w + brickInfo.padding) + brickInfo.offsetX;
     const y = i * (brickInfo.h + brickInfo.padding) + brickInfo.offsetY;
     bricks[i][j] = { x, y, ...brickInfo };
@@ -63,7 +63,7 @@ function drawBall() {
 // draw the paddle on the canvas
 function drawPaddle() {
   ctx.beginPath();
-  ctx.fillRect(paddle.x, paddle.y, paddle.w, paddle.h);
+  ctx.rect(paddle.x, paddle.y, paddle.w, paddle.h);
   ctx.fillStyle = '#745c97';
   ctx.fill();
   ctx.closePath();
@@ -82,7 +82,7 @@ function drawBricks() {
   bricks.forEach(row => {
     row.forEach(brick => {
       ctx.beginPath();
-      ctx.fillRect(brick.x, brick.y, brick.w, brick.h);
+      ctx.rect(brick.x, brick.y, brick.w, brick.h);
       ctx.fillStyle = brick.visible ? '#745c97' : 'transparent';
       ctx.fill();
       ctx.closePath();
@@ -92,7 +92,7 @@ function drawBricks() {
 
 // draw everything on the canvas
 function draw() {
-  // clear before draw
+  // clear the canvas before draw
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   drawBall();
@@ -113,6 +113,46 @@ function movePaddle() {
   }
 }
 
+// move the ball
+function moveBall() {
+  ball.x += ball.dx;
+  ball.y += ball.dy;
+
+  // wall collision
+  if(ball.x + ball.size > canvas.width || ball.x - ball.size < 0) {
+    ball.dx *= -1;
+  }
+
+  if(ball.y + ball.size > canvas.height || ball.y - ball.size < 0) {
+    ball.dy *= -1;
+  }
+
+  // paddle collision
+  if(
+    ball.x + ball.size > paddle.x &&
+    ball.x + ball.size < paddle.x + paddle.w &&
+    ball.y + ball.size > paddle.y
+  ) {
+    ball.dy *= -1;
+  }
+  // bricks collision
+  bricks.forEach(row => {
+    row.forEach(brick => {
+      if(brick.visible) {
+        if(
+          ball.x - ball.size > brick.x && // the right side of the ball
+          ball.x + ball.size < brick.x + brick.w && // the left side
+          ball.y + ball.size > brick.y && // the bottom side
+          ball.y - ball.size < brick.y + brick.h // the top side
+        ) {
+          ball.dy *= -1;
+          brick.visible = false;
+        }
+      }
+    });
+  });
+}
+
 function keyDown(e) {
   if(e.key === 'Right' || e.key === 'ArrowRight') {
     paddle.dx = paddle.speed;
@@ -122,7 +162,8 @@ function keyDown(e) {
 }
 
 function keyUp(e) {
-  if(e.key === 'Right' ||
+  if(
+    e.key === 'Right' ||
     e.key === 'ArrowRight' ||
     e.key === 'Left' ||
     e.key === 'ArrowLeft'
@@ -134,6 +175,7 @@ function keyUp(e) {
 // the update function
 function update() {
   movePaddle();
+  moveBall();
   // draw everything
   draw();
   window.requestAnimationFrame(update);
