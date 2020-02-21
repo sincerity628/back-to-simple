@@ -1,5 +1,8 @@
 const rulesBtn = document.getElementById('rules-btn');
 const closeBtn = document.getElementById('close-btn');
+const againBtn = document.getElementById('again-btn');
+const container = document.getElementById('container');
+const scoreEl = document.getElementById('score');
 const rules = document.getElementById('rules');
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
@@ -147,10 +150,56 @@ function moveBall() {
         ) {
           ball.dy *= -1;
           brick.visible = false;
+
+          if(!container.classList.contains('show')) {
+            increaseScore();
+          }
         }
       }
     });
   });
+
+  // check if loose
+  if(ball.y + ball.size > canvas.height) {
+    scoreEl.innerText = score;
+    container.classList.add('show');
+  }
+
+}
+
+// increase the score & check if any bricks left
+function increaseScore() {
+  score++;
+
+  if(score % (brickRowCount * brickColumnCount) === 0) {
+    showAllBricks();
+  }
+}
+
+// show all the bricks again
+function showAllBricks() {
+  bricks.forEach(row => {
+    row.forEach(brick => {
+      brick.visible = true;
+    });
+  });
+}
+
+// make the ball back to center;
+function resetBall() {
+  ball.x = canvas.width / 2;
+  ball.y = canvas.height / 2;
+
+  ball.dx = 4;
+  ball.dy = -4;
+}
+
+function playAgain() {
+  score = 0;
+  showAllBricks();
+  resetBall();
+
+  container.classList.remove('show');
 }
 
 function keyDown(e) {
@@ -191,3 +240,4 @@ document.addEventListener('keyup', keyUp);
 // btn action handlers
 rulesBtn.addEventListener('click', () => rules.classList.add('show'));
 closeBtn.addEventListener('click', () => rules.classList.remove('show'));
+againBtn.addEventListener('click', playAgain);
