@@ -4,7 +4,7 @@
 
 ---
 
-### :eyes: projects website: [link](https://sincerity628.github.io/back-to-simple/)
+### :eyes: projects website: [link](http://47.98.249.108:3001/)
 
 ![homepage](./assets/images/index.png)
 
@@ -28,4 +28,5 @@
 - 14-text-reader [detail](https://github.com/sincerity628/back-to-simple/tree/master/14-text-reader)
 - 15-lyrics-finder [detail](https://github.com/sincerity628/back-to-simple/tree/master/15-lyrics-finder)
 - 16-relaxer-app [detail](https://github.com/sincerity628/back-to-simple/tree/master/16-relaxer-app)
+- 17-breakout-game [detail](https://github.com/sincerity628/back-to-simple/tree/master/17-breakout-game)
 ---
