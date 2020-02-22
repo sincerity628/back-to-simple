@@ -40,7 +40,7 @@ h1 {
 }
 
 .countdown {
-  display: flex;
+  display: none;
   transform: scale(1.5);
 }
 
@@ -56,6 +56,16 @@ h1 {
   margin: 0 0 5px;
 }
 
+.year {
+  font-size: 180px;
+  z-index: -1;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.3;
+}
+
 @media(max-width: 500px) {
   h1 {
     font-size: 35px;
@@ -67,5 +77,9 @@ h1 {
 
   .time {
     margin: 10px;
+  }
+
+  .year {
+    font-size: 140px;
   }
 }
