@@ -29,4 +29,6 @@
 - 15-lyrics-finder [detail](https://github.com/sincerity628/back-to-simple/tree/master/15-lyrics-finder)
 - 16-relaxer-app [detail](https://github.com/sincerity628/back-to-simple/tree/master/16-relaxer-app)
 - 17-breakout-game [detail](https://github.com/sincerity628/back-to-simple/tree/master/17-breakout-game)
+- 18-new-year-countdown [detail](https://github.com/sincerity628/back-to-simple/tree/master/18-new-year-countdown)
+
 ---
