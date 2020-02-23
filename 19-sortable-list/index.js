@@ -100,3 +100,25 @@ function addEventListeners() {
     item.addEventListener('drop', dragDrop);
   });
 }
+
+// check the exist order
+function checkOrder() {
+  listItems.forEach((item, index) => {
+    const cityName = item.querySelector('.city-name').innerText;
+    if(cities.indexOf(cityName) === index) {
+      item.classList.add('right');
+    } else {
+      item.classList.add('wrong');
+    }
+  });
+
+  // remove the check effect after 3s
+  setTimeout(() => {
+    listItems.forEach(item => {
+      item.className = '';
+    })
+  }, 3000);
+}
+
+// event listener
+checkBtn.addEventListener('click', checkOrder);
