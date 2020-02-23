@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+:root {
+  --border-color: #e3e5e4;
+  --background-color: #c3c7ca;
+  --text-color: #34444f;
+  --right-color: #3ae374;
+  --wrong-color: #ff3838;
+  --over-color: #eaeaea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  height: 100vh;
+}
+
+.draggable-list {
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 0;
+  list-style-type: none;
+}
+
+.draggable-list li {
+  display: flex;
+  flex: 1;
+  background-color: #fff;
+}
+
+.draggable-list li:not(:last-of-type) {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.draggable-list .number {
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
+  font-size: 20px;
+}
+
+.city-name {
+  margin: 0 50px 0 0;
+}
+
+.draggable-list li.right .city-name {
+  color: var(--right-color);
+}
+
+.draggable-list li.wrong .city-name {
+  color: var(--wrong-color);
+}
+
+.draggable {
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.draggable-list li.over .draggable {
+  background-color: var(--over-color);
+}
+
+.check-btn {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 10px 20px;
+  border: 0;
+  font-size: 14px;
+  margin: 20px auto 40px;
+}
+
+.check-btn:hover {
+  cursor: pointer;
+  background-color: #b0b1b3;
+}
+
+.check-btn:active {
+  transform: scale(0.98);
+}
+
+.check-btn:focus {
+  outline: none;
+}
