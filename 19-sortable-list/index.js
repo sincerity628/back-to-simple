@@ -17,7 +17,7 @@ const cities = [
 
 const listItems = [];
 
-let dragIndex;
+let dragStartIndex;
 
 createList();
 
@@ -51,7 +51,7 @@ function createList() {
 }
 
 function dragStart() {
-  console.log('drag start.');
+  dragStartIndex = this.closest('li').getAttribute('data-index');
 }
 
 function dragEnter() {
@@ -62,12 +62,26 @@ function dragLeave() {
   this.classList.remove('over');
 }
 
-function dragOver() {
-  console.log('drag over.');
+function dragOver(e) {
+  e.preventDefault();
 }
 
 function dragDrop() {
-  console.log('drop.');
+  const dragEndIndex = this.getAttribute('data-index');
+  swapItem(dragStartIndex, dragEndIndex);
+
+  // clear the drag over background color
+  this.classList.remove('over');
+}
+
+// swap the drag & drop items
+function swapItem(fromIndex, toIndex) {
+  const itemOne = listItems[fromIndex].querySelector('.draggable');
+  const itemTwo = listItems[toIndex].querySelector('.draggable');
+
+  // swap
+  listItems[fromIndex].appendChild(itemTwo);
+  listItems[toIndex].appendChild(itemOne);
 }
 
 // add all the drag & drop event listeners
