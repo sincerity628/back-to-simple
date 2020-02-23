@@ -46,4 +46,43 @@ function createList() {
 
       draggableList.appendChild(cityItem);
     });
+
+  addEventListeners();
+}
+
+function dragStart() {
+  console.log('drag start.');
+}
+
+function dragEnter() {
+  this.classList.add('over');
+}
+
+function dragLeave() {
+  this.classList.remove('over');
+}
+
+function dragOver() {
+  console.log('drag over.');
+}
+
+function dragDrop() {
+  console.log('drop.');
+}
+
+// add all the drag & drop event listeners
+function addEventListeners() {
+  const draggables = document.querySelectorAll('.draggable');
+  const draggableListItems = document.querySelectorAll('.draggable-list li');
+
+  draggables.forEach(draggable => {
+    draggable.addEventListener('dragstart', dragStart);
+  });
+
+  draggableListItems.forEach(item => {
+    item.addEventListener('dragenter', dragEnter);
+    item.addEventListener('dragleave', dragLeave);
+    item.addEventListener('dragover', dragOver);
+    item.addEventListener('drop', dragDrop);
+  });
 }
