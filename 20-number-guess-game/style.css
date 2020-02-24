@@ -33,12 +33,21 @@ p {
 }
 
 .play-again-btn {
+  cursor: pointer;
   background-color: #f4f4f4;
   border: 0;
   padding: 8px 15px;
   font-size: 14px;
   margin-top: 10px;
   border-radius: 4px;
+}
+
+.play-again-btn:active {
+  transform: scale(0.98);
+}
+
+.play-again-btn:focus {
+  outline: none;
 }
 
 .msg {

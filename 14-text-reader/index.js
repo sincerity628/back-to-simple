@@ -92,7 +92,7 @@ function addBoxToDOM(item) {
 
 // get the voices from the api and put them into select
 function getVoices() {
-  voices = speechSynthesis.getVoices();
+  voices = window.speechSynthesis.getVoices();
 
   voices.forEach(voice => {
     const option = document.createElement('option');
@@ -111,7 +111,7 @@ function setText(text) {
 
 // toggle speak
 function speakText() {
-  speechSynthesis.speak(message);
+  window.speechSynthesis.speak(message);
 }
 
 // set the voice of the speaker
@@ -142,4 +142,4 @@ readBtn.addEventListener('click', () => {
 });
 
 // voices change
-speechSynthesis.addEventListener('voiceschanged', getVoices);
+window.speechSynthesis.addEventListener('voiceschanged', getVoices);
