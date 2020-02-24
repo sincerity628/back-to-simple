@@ -1,7 +1,7 @@
 const msgEl = document.getElementById('msg');
 
 const randomNumber = getRandomNumber();
-console.log("Number:", randomNumber);
+// console.log("Number:", randomNumber);
 
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
@@ -69,7 +69,6 @@ function checkNumber(msg) {
   } else {
     msgEl.innerHTML += '<div>GO HIGHER</div>';
   }
-
 }
 
 // event listener
