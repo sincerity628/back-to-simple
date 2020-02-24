@@ -104,11 +104,13 @@ function addEventListeners() {
 // check the exist order
 function checkOrder() {
   listItems.forEach((item, index) => {
-    const cityName = item.querySelector('.city-name').innerText;
+    const cityName = item.querySelector('.city-name').innerText.trim();
     if(cities.indexOf(cityName) === index) {
       item.classList.add('right');
+      item.classList.remove('wrong');
     } else {
       item.classList.add('wrong');
+      item.classList.remove('right');
     }
   });
 
