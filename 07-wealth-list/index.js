@@ -5,6 +5,50 @@ const showMillionairesBtn = document.getElementById('show-millionaires');
 const sortBtn = document.getElementById('sort');
 const calculateWealthBtn = document.getElementById('calculate-wealth');
 
+// the random user api is not working
+const users = [
+  'Barbara Landry',
+  'Leon Ray',
+  'Rosina Manning',
+  'Maverick Drummond',
+  'Kianna Martins',
+  'Ace Humphreys',
+  'Nial Mansell',
+  'Aliyah Osborn',
+  'Forrest Collier',
+  'Tahir Golden',
+  'Marcelina Leal',
+  'Darsh Spence',
+  'Md Cordova',
+  'John Sykes',
+  'Aaisha Vickers',
+  'Sarah Rowland',
+  'Braden Huynh',
+  'Khadeeja Harper',
+  'Lottie Phelps',
+  'Bianca Driscoll',
+  'Tayyib Dickens',
+  'Tegan Flowers',
+  'Gregor Chase',
+  'Shanae Lennon',
+  'Daniaal Gibbs',
+  'Anniyah Paine',
+  'Carly Knowles',
+  'Harvir Harris',
+  'Demi-Lee Ahmed',
+  'Herbie Roberson',
+  'Deniz Jordan',
+  'Myles Morton',
+  'Bernice Needham',
+  'Nabila Mccallum',
+  'Izaan Iles',
+  'Lila Warner',
+  'Ali Witt',
+  'Wendy Gonzalez',
+  'Kobie Cain',
+  'Brittney Lamb'
+];
+
 // to store the user objects
 let data = [];
 
@@ -13,17 +57,26 @@ getRandomUser();
 getRandomUser();
 getRandomUser();
 
-async function getRandomUser() {
-  const res = await fetch('https://randomuser.me/api/');
-  const data = await res.json();
+// async function getRandomUser() {
+//   const res = await fetch('https://cors-anywhere.herokuapp.com/https://randomuser.me/api/');
+//   const data = await res.json();
+//
+//   const user = data.results[0];
+//   const newUser = {
+//     name: `${user.name.first} ${user.name.last}`,
+//     wealth: Math.floor(Math.random() * 1000000)
+//   };
+//
+//   addData(newUser);
+// }
 
-  const user = data.results[0];
-  const newUser = {
-    name: `${user.name.first} ${user.name.last}`,
+function getRandomUser() {
+  const user = {
+    name: users[Math.floor(Math.random() * users.length)],
     wealth: Math.floor(Math.random() * 1000000)
   };
 
-  addData(newUser);
+  addData(user);
 }
 
 // add the new user to the data array

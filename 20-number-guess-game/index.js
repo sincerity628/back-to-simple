@@ -19,6 +19,7 @@ function getRandomNumber() {
 
 // capture user speak
 function onSpeak(e) {
+  console.log(e);
   const msg = e.results[0][0].transcript;
 
   writeMessage(msg);
