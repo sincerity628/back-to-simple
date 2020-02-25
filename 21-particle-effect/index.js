@@ -10,13 +10,13 @@ function setup() {
 }
 
 function draw() {
-  background(213, 47, 98);
+  background(103, 188, 196);
 
   particles.forEach((p, index) => {
     p.update();
     p.draw();
     p.connect(particles.slice(index));
-    p.checkMouse(particles.slice(index));
+    // p.checkMouse(particles.slice(index));
   });
 }
 
@@ -34,7 +34,7 @@ class Particle {
   draw() {
     noStroke(); // no border
     circle(this.pos.x, this.pos.y, this.size);
-    fill('rgba(255, 255, 255, 0.5)');
+    fill('rgba(0, 0, 0, 0.5)');
   }
 
   // update the movement by adding the velocity
@@ -59,7 +59,7 @@ class Particle {
     particles.forEach(p => {
       const d = dist(this.pos.x, this.pos.y, p.pos.x, p.pos.y);
       if(d < 120) {
-        stroke(`rgba(255, 255, 255, 0.2)`);
+        stroke(`rgba(0, 0, 0, 0.2)`);
         line(this.pos.x, this.pos.y, p.pos.x, p.pos.y);
       }
     });
