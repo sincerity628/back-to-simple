@@ -19,7 +19,7 @@
 style:
 ```css
 body {
-  background-color: linear-gradient(
+  background-image: linear-gradient(
     0deg,
     rgba(247, 247, 247, 1) 23.8%,
     rgba(252, 221, 221, 1) 92%
