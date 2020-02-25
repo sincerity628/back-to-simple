@@ -1,13 +1,14 @@
 body {
-  background-color: rgb(103, 188, 196);
+  background-color: rgb(255, 255, 255);
   height: 100vh;
   margin: 0;
   overflow: hidden;
 }
 
 h1 {
+  margin: 0;
   position: absolute;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.8);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

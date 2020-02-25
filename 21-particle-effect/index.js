@@ -10,7 +10,7 @@ function setup() {
 }
 
 function draw() {
-  background(103, 188, 196);
+  background(255, 255, 255);
 
   particles.forEach((p, index) => {
     p.update();
