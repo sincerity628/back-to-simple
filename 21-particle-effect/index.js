@@ -24,7 +24,7 @@ class Particle {
   constructor() {
     // position
     this.pos = createVector(random(width), random(height));
-    // veloity
+    // velocity
     this.vel = createVector(random(-2, 2), random(-2, 2));
     // size
     this.size = 10;
