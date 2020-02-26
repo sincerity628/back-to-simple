@@ -72,12 +72,14 @@ button#prev {
   position: absolute;
   top: 50%;
   left: 15px;
+  transform: translateY(-50%);
 }
 
 button#next {
   position: absolute;
   top: 50%;
   right: 15px;
+  transform: translateY(-50%);
 }
 
 button {
