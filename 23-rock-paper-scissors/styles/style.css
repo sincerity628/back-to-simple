@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+:root {
+  --primary-color: #eb4d55;
+  --dark-color: #333333;
+  --light-color: #f4f4f4;
+  --lose-color: #dc3545;
+  --win-color: #28a745;
+}
+
+* {
+  box-sizeing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #fff;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1000px;
+  padding: 0 2rem;
+  margin: auto;
+  overfolw: hidden;
+  text-align: center;
+}
+
+.restart-btn {
+  display: none;
+  background-color: var(--light-color);
+  color: #333;
+  border: 0;
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+.restart-btn:hover {
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.restart-btn:active {
+  transform: scale(0.98);
+}
+
+.restart-btn:focus {
+  outline: none;
+}
+
+header {
+  text-align: center;
+  margin: 20px 0;
+}
+
+header h1 {
+  margin: 10px;
+}
+
+header .score {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 16px;
+  color: #fff;
+}
+
+/* .score p:first-child */
+header .score p:first-of-type {
+  background-color: var(--primary-color);
+}
+
+/* .score p:last-child */
+header .score p:last-of-type {
+  background-color: var(--dark-color);
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin-top: 3rem;
+}
+
+.choice:hover {
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.win-text {
+  color: var(--win-color);
+}
+
+.lose-text {
+  color: var(--lose-color);
+}
+
+@media(max-width: 700px) {
+  .choice {
+    font-size: 110px;
+  }
+}
+
+@media(max-width: 500px) {
+  .choice {
+    font-size: 80px;
+  }
+}
