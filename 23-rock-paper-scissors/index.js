@@ -2,9 +2,7 @@ const modal = document.getElementById('modal');
 const restartBtn = document.getElementById('restart');
 const scoreEl = document.getElementById('score');
 const resultEl = document.getElementById('result');
-const rock = document.getElementById('rock');
-const paper = document.getElementById('paper');
-const scissors = document.getElementById('scissors');
+const choices = document.querySelectorAll('.choice');
 
 // data
 // the choices
@@ -17,12 +15,12 @@ let computerScore = 0;
 const result = ['rock', 'paper', 'scissors'];
 
 // function
-function startGame(choice) {
+function startGame(e) {
   // show Btn
   restartBtn.style.display = 'inline-block';
 
   // user made choice
-  userChoice = choice;
+  userChoice = e.target.id;
 
   // compuer made the choice
   computerChoice = computerChoose();
@@ -30,7 +28,7 @@ function startGame(choice) {
   // check the winner
   const winner = checkWinner();
 
-  console.log(winner);
+  countScore(winner);
 }
 
 // computer choose
@@ -40,12 +38,84 @@ function computerChoose() {
 
 // check Winner
 function checkWinner() {
-  console.log(userChoice, computerChoice);
+  // draw
+  if(userChoice === computerChoice) {
+    return 'nobody';
+  }
 
-  return 'nobody';
+  // user wins
+  if(userChoice === 'rock' && computerChoice === 'scissors' ||
+    userChoice === 'paper' && computerChoice === 'rock' ||
+    userChoice === 'scissors' && computerChoice === 'paper'
+  ) {
+    return 'user';
+  }
+
+  // computer wins
+  if(computerChoice === 'rock' && userChoice === 'scissors' ||
+    computerChoice === 'paper' && userChoice === 'rock' ||
+    computerChoice === 'scissors' && userChoice === 'paper'
+  ) {
+    return 'computer';
+  }
+}
+
+// count the score
+function countScore(winner) {
+  if(winner === 'nobody') {
+    resultEl.innerHTML = `
+      <h2>Draw!</h2>
+      <i class="fas fa-hand-${computerChoice} fa-9x"></i>
+      <p>Computer chose ${ computerChoice }.</p>
+    `;
+    modal.style.display = 'flex';
+
+  } else if(winner === 'user') {
+    resultEl.innerHTML = `
+      <h2 class="win-text">You Win!</h2>
+      <i class="fas fa-hand-${computerChoice} fa-9x"></i>
+      <p>Computer chose ${ computerChoice }.</p>
+    `;
+    modal.style.display = 'flex';
+
+    userScore++;
+
+    updateScore();
+  } else {
+    resultEl.innerHTML = `
+      <h2 class="lose-text">You lose!</h2>
+      <i class="fas fa-hand-${computerChoice} fa-9x"></i>
+      <p>Computer chose ${ computerChoice }</p>
+    `;
+    modal.style.display = 'flex';
+
+    computerScore++;
+
+    updateScore();
+  }
+}
+
+// close the modal
+function closeModal(e) {
+  if(e.target.id === 'modal') {
+    modal.style.display = 'none';
+  }
+}
+
+// update the score board in the DOM
+function updateScore() {
+  scoreEl.innerHTML = `
+    <p>Player: ${ userScore }</p>
+    <p>Computer: ${ computerScore }</p>
+  `;
 }
 
 // event listeners
-rock.addEventListener('click', () => startGame('rock'));
-paper.addEventListener('click', () => startGame('paper'));
-scissors.addEventListener('click', () => startGame('scissors'));
+// user make the choice
+choices.forEach(choice => choice.addEventListener('click', startGame));
+
+// restart the game
+restartBtn.addEventListener('click', () => window.location.reload());
+
+// close the modal
+document.addEventListener('click', closeModal);
