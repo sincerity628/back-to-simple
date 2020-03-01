@@ -35,4 +35,5 @@
 - 21-particle-effect (used p5.js) [detail](https://github.com/sincerity628/back-to-simple/tree/master/21-particle-effect)
 - 22-image-slider [detail](https://github.com/sincerity628/back-to-simple/tree/master/22-image-slider)
 - 23-rock-paper-scissors [detail](https://github.com/sincerity628/back-to-simple/tree/master/23-rock-paper-scissors)
+- 24-blur-effect-page [detail](https://github.com/sincerity628/back-to-simple/tree/master/24-blur-effect-page)
 ---
