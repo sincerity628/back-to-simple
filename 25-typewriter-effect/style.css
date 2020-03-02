@@ -36,6 +36,10 @@ h2 {
   color: #4a4a4a;
 }
 
+.text {
+  border-right: 0.2rem solid #6c6c6c;
+}
+
 @media screen and (min-width: 1200px) {
   h1 {
     font-size: 4.5rem;
@@ -48,7 +52,7 @@ h2 {
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
   }
 
   h2 {
