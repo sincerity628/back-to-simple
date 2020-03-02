@@ -36,4 +36,5 @@
 - 22-image-slider [detail](https://github.com/sincerity628/back-to-simple/tree/master/22-image-slider)
 - 23-rock-paper-scissors [detail](https://github.com/sincerity628/back-to-simple/tree/master/23-rock-paper-scissors)
 - 24-blur-effect-page [detail](https://github.com/sincerity628/back-to-simple/tree/master/24-blur-effect-page)
+- 25-typewriter-effect [detail](https://github.com/sincerity628/back-to-simple/tree/master/25-typewriter-effect)
 ---
