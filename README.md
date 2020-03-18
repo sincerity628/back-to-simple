@@ -38,4 +38,5 @@
 - 24-blur-effect-page [detail](https://github.com/sincerity628/back-to-simple/tree/master/24-blur-effect-page)
 - 25-typewriter-effect [detail](https://github.com/sincerity628/back-to-simple/tree/master/25-typewriter-effect)
 - 26-parallax-effect-page [detail](https://github.com/sincerity628/back-to-simple/tree/master/26-parallax-effect-page)
+- 27-fullpage-video [detail](https://github.com/sincerity628/back-to-simple/tree/master/27-fullpage-video)
 ---
