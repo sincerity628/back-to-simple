@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  position: relatvie;
+  font-family: 'Lato', sans-serif;
+  height: 100vh;
+}
+
+video {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  color: #fff;
+
+  h1 {
+    margin-bottom: 15px;
+  }
+
+  button {
+    background-color: #000;
+    color: #fff;
+    border: 0;
+    font-size: 1.2rem;
+    margin-top: 30px;
+    padding: 8px 12px;
+    width: 15%;
+    min-width: 100px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #edecec;
+      color: #000;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+}
